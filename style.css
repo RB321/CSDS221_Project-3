@@ -1,0 +1,111 @@
+:root {
+  --main-color: #80c5e8;
+  --secondary-color: #391680;
+  --bg-color: linear-gradient(135deg, var(--main-color), var(--secondary-color));
+  --font-family: "Raleway", sans-serif;
+  --button-height: 22vmin;
+  --button-width: 22vmin;
+  --button-font-size: 12vmin;
+  --button-color: #000000;
+  --button-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --restart-font-size: 1.3em;
+  --restart-padding: 1em;
+  --restart-bg-color: #0a0027;
+  --restart-color: #ffffff;
+  --popup-font-size: 12vmin;
+  --new-game-font-size: 0.6em;
+  --new-game-padding: 0.5em 1em;
+  --new-game-bg-color: #0a0027;
+  --new-game-color: #ffffff;
+  --message-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-color);
+  font-family: var(--font-family);
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 70vmin;
+  height: 70vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
+}
+
+.button-option {
+  background: #ffffff;
+  height: var(--button-height);
+  width: var(--button-width);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
+  box-shadow: var(--button-shadow);
+}
+
+#restart {
+  font-size: var(--restart-font-size);
+  padding: var(--restart-padding);
+  border-radius: var(--border-radius);
+  background-color: var(--restart-bg-color);
+  color: var(--restart-color);
+  border: none;
+  position: relative;
+  margin: 1.5em auto 0 auto;
+  display: block;
+}
+
+.popup {
+  background: var(--bg-color);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  font-size: var(--popup-font-size);
+}
+
+#new-game {
+  font-size: var(--new-game-font-size);
+  padding: var(--new-game-padding);
+  background-color: var(--new-game-bg-color);
+  color: var(--new-game-color);
+  border-radius: 0.2em;
+  border: none;
+}
+
+#message {
+  color: var(--message-color);
+  text-align: center;
+  font-size: 1em;
+}
+
+.popup.hide {
+  display: none;
+}
